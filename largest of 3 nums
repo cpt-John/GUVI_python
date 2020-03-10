@@ -1,0 +1,4 @@
+x = []
+exec("x.append(input());"*3)
+nums = [float(i.rstrip()) for i in x]
+print(max(nums))
