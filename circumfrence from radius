@@ -1,0 +1,10 @@
+from math import pi as PI
+
+
+def circum(radi_):
+    if radi_ < 0:
+        return "Error"
+    return(round((2*PI*radi_), 2))
+
+
+print(circum(float(input())))
