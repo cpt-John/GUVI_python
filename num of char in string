@@ -1,0 +1,6 @@
+input__ = input()
+i = 0
+for l in input__:
+    if l != " ":
+        i += 1
+print(i)
