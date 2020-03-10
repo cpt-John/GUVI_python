@@ -1,0 +1,15 @@
+# -b + √(b² - 4ac)} / 2a & {-b -√(b² - 4ac)} / 2a
+
+from math import sqrt
+
+
+def find_roots(A, B, C):
+    prt_2 = sqrt((B**2)-(4*A*C))
+    prt_1 = -1*B
+    return ((prt_1+prt_2)/(2*A), (prt_1-prt_2)/(2*A))
+
+
+nums = [float(i) for i in input().split()]
+result = find_roots(*nums)
+print("%.2f" % result[0])
+print("%.2f" % result[1])
