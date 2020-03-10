@@ -2,7 +2,7 @@
 
 
 def convert(c):
-    return ("%.2f" % ((c*9/5)+32))
+    return ("%.2f" % (c*9/5+32))
 
 
-print(input())
+print(convert(int(input())))
