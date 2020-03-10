@@ -1,0 +1,9 @@
+def leap_year(yr):
+    if not yr % 4 and yr % 100:
+        return "Y"
+    if not yr % 400:
+        return "Y"
+    return "N"
+
+
+print(leap_year(int(input())))
