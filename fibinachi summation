@@ -1,0 +1,16 @@
+def fibnachi_sum(n):
+    fib_sum = 2
+    a = 1
+    b = 1
+    c = 0
+    if n == 0:
+        return 1
+    for i in range(1, n):
+        c = a+b
+        a = b
+        b = c
+        fib_sum += c
+    return fib_sum
+
+
+print(fibnachi_sum(int(input()))*1000)
