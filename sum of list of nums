@@ -1,0 +1,2 @@
+nums = [float(i) for i in input().split()]
+print(round(sum(nums), 1))
