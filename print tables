@@ -1,0 +1,8 @@
+def tables(n, l):
+    if l < 1:
+        return "NULL"
+    i = 1
+    exec("print(n*i,end=' ');i+=1;"*l)
+
+
+tables(int(input()), 10)
