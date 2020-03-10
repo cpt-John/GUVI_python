@@ -1,0 +1,12 @@
+num = round(float(input()))
+
+
+def odd_even(n):
+    if not n:
+        return "Zero"
+    elif n % 2:
+        return "Odd"
+    return "Even"
+
+
+print(odd_even(num))
