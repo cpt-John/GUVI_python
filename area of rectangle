@@ -1,0 +1,4 @@
+x = []
+exec("x.append(input());"*2)
+nums = [float(i.rstrip()) for i in x]
+print(round(nums[0]*nums[1], 1))
