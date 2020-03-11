@@ -1,0 +1,33 @@
+# july 22 1987 && 31
+
+months_31 = ["JANUARY", "MARCH", "MAY",
+             "JULY", "AUGUST", "OCTOBER", "DECEMBER"]
+monthst_fist6 = ["JANUARY", "FEBRUARY",
+                 "MARCH", "APRIL", "MAY", "JUNE", "JULY"]
+
+length = int(input())*3
+input__ = [i.rstrip() for i in input().split()]
+
+
+i = 0
+indx = 1
+result = ""
+while i < length:
+    day = int(input__[i])
+    month = input__[i+1]
+    yr = int(input__[i+2])
+    if yr <= 1987 and month in months_31:
+        if yr == 1987 and month in monthst_fist6:
+            if month == "JULY" and day <= 22:
+                result += f"{indx} "
+            elif month != "JULY":
+                result += f"{indx} "
+        elif yr < 1987:
+            result += f"{indx} "
+    i += 3
+    indx += 1
+
+if result=="":
+    print("-1")
+else:
+    print(result.rstrip())
