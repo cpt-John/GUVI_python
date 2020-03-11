@@ -1,0 +1,13 @@
+import fractions
+
+
+def summation_prob(n):
+    summation = fractions.Fraction(0)
+    if n < 1:
+        return "0"
+    for i in range(1, n+1):
+        summation += (fractions.Fraction(1, 6**i))
+    return f"{summation.numerator} {summation.denominator}"
+
+
+print(summation_prob(int(input())))
