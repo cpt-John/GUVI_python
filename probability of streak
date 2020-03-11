@@ -4,7 +4,7 @@ import fractions
 def summation_prob(n):
     if n < 1:
         return "0"
-    result = (fractions.Fraction(1, 6**i))
+    result = (fractions.Fraction(1, 6**n))
     return f"{result.numerator} {result.denominator}"
 
 
