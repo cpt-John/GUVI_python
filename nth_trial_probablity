@@ -1,0 +1,13 @@
+# n = no of trials , a = numerator , b = denominator ,a/b = probability of single trial
+import fractions
+
+def nth_trial_prob(n, a, b):
+    a = b-a
+    if n < 1:
+        return "0 0"
+    result = fractions.Fraction(1, 1)-fractions.Fraction(a**n, b**n)
+    return f"{result.numerator}/{result.denominator}"
+
+
+input__ = [int(i) for i in input().split()]
+print(nth_trial_prob(*input__))
