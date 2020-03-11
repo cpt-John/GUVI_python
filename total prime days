@@ -1,0 +1,22 @@
+nums = [i for i in input().split()]
+M, Y = nums[0].upper(), int(nums[1])
+months_31 = ["JANUARY", "MARCH", "MAY",
+             "JULY", "AUGUST", "OCTOBER", "DECEMBER"]
+
+
+def leap_year(yr):
+    if not yr % 4 and yr % 100:
+        return True
+    if not yr % 400:
+        return True
+    return False
+
+
+if M == "FEBRUARY" and leap_year(Y):
+    print(10)
+elif M == "FEBRUARY":
+    print(9)
+elif M in months_31:
+    print(11)
+else:
+    print(10)
