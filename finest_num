@@ -1,0 +1,32 @@
+# n = t ^ 3+(t+1) ^ 3
+
+
+def fine_number(n):
+    fine = 0
+    i = 0
+    while fine < n:
+        fine = i**3+(i+1)**3
+        i += 1
+        if fine == n:
+            return True
+    return False
+
+
+length = int(input())
+input__ = [int(i.rstrip()) for i in input().split()]
+
+out__ = []
+
+i = 0
+while i < length:
+    if fine_number(input__[i]):
+        out__.append(input__[i])
+    i += 1
+
+if len(out__):
+    result = ""
+    for n in sorted(out__):
+        result += (str(n)+" ")
+    print(result.rstrip())
+else:
+    print("-1",end="")
