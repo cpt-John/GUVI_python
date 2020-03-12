@@ -1,0 +1,27 @@
+def prime_nums(n):
+    if n < 1:
+        return "empty"
+    prime_list = [2]
+    i = 3
+    while len(prime_list) < n:
+        divi = 0
+        for each in prime_list:
+            if not i % each:
+                divi += 1
+                break
+        if divi == 0:
+            prime_list.append(i)
+        i += 1
+    return prime_list
+
+
+n = int(input())
+p = prime_nums(n)
+a_s = ""
+total = 0
+i = 0
+while i < n:
+    total += p[i]
+    a_s += f"{total} "
+    i += 1
+print(a_s.rstrip())
