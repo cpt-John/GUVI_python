@@ -1,0 +1,28 @@
+# nums = [int(i) for i in input().split()]
+num = int(input())
+
+
+def prime_nums(n):
+    if n < 2:
+        return "empty"
+    prime_list = [2]
+    for i in range(3, n+1):
+        divi = 0
+        for each in prime_list:
+            if not i % each:
+                divi += 1
+                break
+        if divi == 0 and not n % i:
+            prime_list.append(i)
+    if n % 2:
+        prime_list.remove(2)
+    return prime_list
+
+
+p_l = prime_nums(num)
+pw_sum = 0
+for e in p_l:
+    while not num % e:
+        num = num/e
+        pw_sum += 1
+print(pw_sum)
