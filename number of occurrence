@@ -1,0 +1,19 @@
+#Sample Input :
+#10
+#1 1 1 2 2 2 3 8 9 7
+#5
+#1 2 3 0 5
+#Sample Output :
+#3 3 1 Not Present Not Present
+
+len_1 = int(input())
+nums_k = [int(i) for i in input().split()]
+len_2 = int(input())
+nums_q = [int(i) for i in input().split()]
+result = ""
+for e in nums_q:
+    if nums_k.count(e):
+        result += f"{nums_k.count(e)} "
+    else:
+        result += f"Not Present "
+print(result.rstrip())
