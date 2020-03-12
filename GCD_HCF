@@ -1,0 +1,40 @@
+nums = [int(i) for i in input().split()]
+# num = int(input())
+
+
+def prime_nums(n):
+    if n < 2:
+        return []
+    prime_list = [2]
+    for i in range(3, n+1):
+        divi = 0
+        for each in prime_list:
+            if not i % each:
+                divi += 1
+                break
+        if divi == 0:
+            prime_list.append(i)
+    return prime_list
+
+
+p_l = prime_nums(min(nums))
+f_l = []
+# print(nums)
+for p in p_l:
+    compelted = True
+    while compelted:
+        for n in nums:
+            if n % p:
+                compelted = False
+                break
+        if compelted:
+            f_l.append(p)
+            for i in range(0, len(nums)):
+                nums[i] = nums[i]/p
+        # print(p, ":", nums)
+
+GCD = 1
+for f in f_l:
+    GCD *= f
+
+print(GCD)
