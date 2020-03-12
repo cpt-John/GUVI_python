@@ -1,0 +1,10 @@
+nums = []
+s = input()
+n = ""
+for e in s:
+    if e.isnumeric():
+        n += e
+    elif n != "":
+        nums.append(int(n))
+        n = ""
+print(nums)
