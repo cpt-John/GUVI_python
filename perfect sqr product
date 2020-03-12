@@ -1,0 +1,7 @@
+from math import sqrt
+nums = [int(i)for i in input().split()]
+r = nums[0]*nums[1]
+if sqrt(r) == int(sqrt(r)):
+    print("yes")
+else:
+    print("no")
