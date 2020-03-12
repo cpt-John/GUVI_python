@@ -1,0 +1,22 @@
+len_1 = int(input())
+nums_k = [int(i) for i in input().split()]
+result__ = []
+result = ""
+mini = nums_k.count(nums_k[0])
+for e in nums_k:
+    if nums_k.count(e) < mini:
+        mini = nums_k.count(e)
+for e in nums_k:
+    if nums_k.count(e) == mini:
+        result__.append(e)
+result__ = sorted(result__, reverse=True)
+for e in result__:
+    result += f"{e} "
+print(result.rstrip())
+
+
+# Sample Input:
+# 9
+# 1 6 4 56 56 56 6 4 2
+# Sample Output:
+# 2 1
