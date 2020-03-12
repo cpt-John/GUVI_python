@@ -36,5 +36,6 @@ for p in p_l:
 GCD = 1
 for f in f_l:
     GCD *= f
-
+if 0 in nums:
+    GCD = "undefined"
 print(GCD)
