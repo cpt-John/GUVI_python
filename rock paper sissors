@@ -1,0 +1,10 @@
+n = [i for i in input().split()]
+
+if n[0] == n[1]:
+    print('D')
+elif 'R'in n and 'P'in n:
+    print('P')
+elif 'R'in n and 'S'in n:
+    print('R')
+elif 'S'in n and 'P'in n:
+    print('S')
