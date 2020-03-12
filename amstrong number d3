@@ -1,0 +1,14 @@
+nums = []
+
+k = 2
+i = str(k)
+while len(nums) < 4:
+    k += 1
+    total = 0
+    for e in i:
+        total += int(e)**3
+    if int(i) == total:
+        print(i)
+        nums.append(i)
+    total = 0
+    i = str(k)
