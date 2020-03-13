@@ -1,0 +1,15 @@
+nums = [int(i) for i in input().split()]
+nums_1 = [int(i) for i in input().split()]
+nums_2 = [int(i) for i in input().split()]
+nums_3 = [int(i) for i in input().split()]
+# nums = [i for i in input()]
+
+p1 = sum(nums)
+p2 = sum(nums_1)
+p3 = sum(nums_2)
+p4 = sum(nums_3)
+
+if (p1-p2) == (p2-p3) == (p3-p4) == (p4-p1):
+    print("yes")
+else:
+    print("no")
