@@ -1,0 +1,21 @@
+def permutation(lst):
+
+    l = []
+
+    # If there is only one element in lst then, only
+    # one permuatation is possible
+    if len(lst) <= 1:
+        return [lst]
+
+    for i in range(len(lst)):
+        m = lst[i]
+       # Extract lst[i] or m from the list.  remLst is
+       # remaining list
+        remLst = lst[:i] + lst[i+1:]
+
+       # Generating all permutations where m is first
+       # element
+        temp = permutation(remLst)
+        for p in temp:
+            l.append([m] + p)
+    return l
