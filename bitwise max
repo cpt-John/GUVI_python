@@ -1,0 +1,12 @@
+l = [int(i) for i in input().split()]
+# nums = [int(i) for i in input().split()]
+
+
+def b_max(x, y):
+    return x ^ ((x ^ y) & -(x < y))
+
+
+max_ = nums[0]
+for e in range(0, l[0]):
+    max_ = b_max(max_, nums[e])
+print(max_)
