@@ -1,6 +1,8 @@
 st = [i for i in input()]
 finshed = False
 while not finshed:
+    if len(st)<2:
+        break
     for i in range(0, len(st)):
         if i == len(st)-1:
             finshed = True
