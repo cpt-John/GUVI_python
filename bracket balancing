@@ -1,0 +1,11 @@
+r = input()
+op_b = ["{", "(", "["]
+cl_b = ["}", ")", "]"]
+x = 1
+if not 1 & len(r):
+    for i in range(0, len(r)//2):
+        if op_b.index(r[i]) != cl_b.index(r[(i*-1)-1]):
+            x = 0
+            break
+else:x=0           
+print(x)
