@@ -1,0 +1,14 @@
+st = [i for i in input()]
+finshed = False
+while not finshed:
+    for i in range(0, len(st)):
+        if i == len(st)-1:
+            finshed = True
+            break
+        if st[i] == st[i+1]:
+            st.pop(i)
+            st.pop(i)
+            break
+r = ""
+for w in st:
+    r += f"{w}"
