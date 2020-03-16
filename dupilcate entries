@@ -1,0 +1,10 @@
+l = int(input())
+n = [i for i in input().split()]
+o = ""
+for w in range(0, l):
+    if n[w] in n[:w]:
+        o += n[w]+str(n[:w].count(n[w]))+" "
+    else:
+        o += "Verified "
+
+print(o.rstrip())
