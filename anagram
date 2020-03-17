@@ -1,0 +1,4 @@
+def anagram(s, ss):
+    if sorted(s) != sorted(ss):
+        return False
+    return True
