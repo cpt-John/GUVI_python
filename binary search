@@ -1,0 +1,19 @@
+n = [int(i) for i in input().split()]
+l,w = n[0], n[1]
+x = [int(i) for i in input().split()]
+x.sort()
+found = False
+l1, l2 = -1, len(x)
+while (l2-l1) > 0:
+    indx = ((l2-l1)//2)+l1
+    if w == x[indx]:
+        found = True
+        break
+    elif w > x[indx]:
+        l1 = indx
+    else:
+        l2 = indx
+    if (l2-l1)==1 and w != x[indx]:
+        break
+if found:print("yes")
+else : print("no")
