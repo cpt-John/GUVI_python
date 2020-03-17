@@ -1,0 +1,12 @@
+n = [i for i in input()]
+o = ""
+s =3 #shifting
+for l in n:
+    if 91 <= ord(l)+s <= 93:
+        l = chr((ord(l)+s) % 91 + 65)
+    elif 123 <= ord(l)+s <= 125:
+        l = chr((ord(l)+s) % 123 + 97)
+    else:
+        l = chr(ord(l)+s)
+    o += l
+print(o.rstrip())
